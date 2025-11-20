@@ -118,27 +118,102 @@ const Index = () => {
         </div>
       </nav>
 
-      <section id="hero" className="min-h-screen flex items-center justify-center pt-16 px-4">
-        <div className="container mx-auto text-center">
-          <div className="animate-fade-in">
-            <Badge className="mb-4" variant="outline">Веб-разработчик</Badge>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-secondary">
-              Создаю современные
-              <br />
-              <span className="text-primary">веб-приложения</span>
-            </h1>
-            <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              6 лет опыта в разработке высококачественных решений для бизнеса
-            </p>
-            <div className="flex gap-4 justify-center">
-              <Button size="lg" onClick={() => scrollToSection('portfolio')}>
+      <section id="hero" className="relative min-h-screen flex items-center justify-center pt-16 px-4 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
+        
+        <div className="absolute top-20 right-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-pulse" />
+        <div className="absolute bottom-20 left-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-pulse delay-700" />
+        
+        <div className="container mx-auto relative z-10">
+          <div className="max-w-5xl mx-auto">
+            <div className="animate-fade-in text-center mb-12">
+              <div className="flex items-center justify-center gap-2 mb-6">
+                <div className="h-px w-12 bg-primary" />
+                <Badge className="text-xs font-semibold tracking-wider" variant="outline">
+                  <Icon name="Code2" size={14} className="mr-1" />
+                  WEB DEVELOPER
+                </Badge>
+                <div className="h-px w-12 bg-primary" />
+              </div>
+              
+              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
+                <span className="text-secondary">Превращаю идеи</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
+                  в технологии
+                </span>
+              </h1>
+              
+              <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
+                6 лет создания надежных веб-решений, которые работают безупречно
+                <span className="text-primary font-semibold"> 24/7</span>
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-12 animate-slide-in-left">
+              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Zap" size={24} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">Быстро</h3>
+                  <p className="text-sm text-muted-foreground">Оптимизированные решения с высокой производительностью</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Shield" size={24} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">Надежно</h3>
+                  <p className="text-sm text-muted-foreground">Проверенные технологии и лучшие практики разработки</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="border-primary/20 hover:border-primary/40 transition-colors">
+                <CardContent className="pt-6 text-center">
+                  <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                    <Icon name="Sparkles" size={24} className="text-primary" />
+                  </div>
+                  <h3 className="font-bold text-lg mb-2">Современно</h3>
+                  <p className="text-sm text-muted-foreground">Актуальный стек и инновационные подходы к задачам</p>
+                </CardContent>
+              </Card>
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+              <Button size="lg" className="text-base px-8 gap-2 shadow-lg shadow-primary/25" onClick={() => scrollToSection('portfolio')}>
+                <Icon name="Briefcase" size={20} />
                 Посмотреть работы
               </Button>
-              <Button size="lg" variant="outline" onClick={() => scrollToSection('contact')}>
-                Связаться
+              <Button size="lg" variant="outline" className="text-base px-8 gap-2" onClick={() => scrollToSection('contact')}>
+                <Icon name="MessageSquare" size={20} />
+                Обсудить проект
               </Button>
             </div>
+
+            <div className="mt-16 flex justify-center gap-8 text-center animate-fade-in">
+              <div>
+                <div className="text-4xl font-bold text-primary mb-1">6+</div>
+                <div className="text-sm text-muted-foreground">лет опыта</div>
+              </div>
+              <div className="w-px bg-border" />
+              <div>
+                <div className="text-4xl font-bold text-primary mb-1">50+</div>
+                <div className="text-sm text-muted-foreground">проектов</div>
+              </div>
+              <div className="w-px bg-border" />
+              <div>
+                <div className="text-4xl font-bold text-primary mb-1">100%</div>
+                <div className="text-sm text-muted-foreground">качество</div>
+              </div>
+            </div>
           </div>
+        </div>
+
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <Icon name="ChevronDown" size={32} className="text-muted-foreground/50" />
         </div>
       </section>
 
