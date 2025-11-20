@@ -36,33 +36,33 @@ const Index = () => {
   };
 
   const skills = [
-    { name: "React", level: 95 },
-    { name: "TypeScript", level: 90 },
-    { name: "Node.js", level: 85 },
-    { name: "CSS/SCSS", level: 90 },
-    { name: "PostgreSQL", level: 80 },
+    { name: "1C-Bitrix", level: 95 },
+    { name: "Bitrix24", level: 90 },
+    { name: "PHP", level: 95 },
+    { name: "MySQL", level: 90 },
+    { name: "JavaScript", level: 85 },
+    { name: "REST API", level: 90 },
     { name: "Git", level: 95 },
-    { name: "Docker", level: 75 },
-    { name: "AWS", level: 70 }
+    { name: "Linux", level: 80 }
   ];
 
   const projects = [
     {
-      title: "E-commerce платформа",
-      description: "Полнофункциональный интернет-магазин с системой платежей и управлением заказами",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
+      title: "Интернет-магазин на 1C-Bitrix",
+      description: "Полнофункциональный интернет-магазин с интеграцией 1С, личным кабинетом и CRM",
+      tech: ["1C-Bitrix", "PHP", "MySQL", "REST API"],
       image: "https://cdn.poehali.dev/projects/7f76d787-cf79-410b-a99c-95aba67ed003/files/e610a7c4-e726-4ec6-8834-8ad4450d7b49.jpg"
     },
     {
-      title: "CRM система",
-      description: "Система управления взаимоотношениями с клиентами для B2B компаний",
-      tech: ["TypeScript", "Express", "MongoDB", "Redis"],
+      title: "Корпоративный портал Bitrix24",
+      description: "Настройка и кастомизация Bitrix24 для автоматизации бизнес-процессов компании",
+      tech: ["Bitrix24", "REST API", "PHP", "JavaScript"],
       image: "https://cdn.poehali.dev/projects/7f76d787-cf79-410b-a99c-95aba67ed003/files/d12e2375-4419-4339-b4d4-2d93c116e676.jpg"
     },
     {
-      title: "Аналитическая панель",
-      description: "Real-time дашборд для визуализации бизнес-метрик и аналитики",
-      tech: ["React", "D3.js", "WebSocket", "AWS"],
+      title: "Highload проект",
+      description: "Оптимизация и масштабирование Bitrix для высоконагруженного проекта",
+      tech: ["1C-Bitrix", "Composer", "Redis", "Memcached"],
       image: "https://cdn.poehali.dev/projects/7f76d787-cf79-410b-a99c-95aba67ed003/files/23293734-e93c-4fd3-a083-6ea4a8a29628.jpg"
     }
   ];
@@ -70,21 +70,42 @@ const Index = () => {
   const experience = [
     {
       period: "2022 - Настоящее время",
-      position: "Senior Frontend Developer",
-      company: "Tech Innovations Ltd",
-      description: "Руководство командой из 5 разработчиков, архитектура frontend решений, внедрение лучших практик"
+      position: "Senior Bitrix Developer",
+      company: "Digital Agency Pro",
+      description: "Разработка сложных интернет-магазинов, интеграции с 1С, руководство проектами"
     },
     {
       period: "2020 - 2022",
-      position: "Frontend Developer",
-      company: "Digital Solutions",
-      description: "Разработка веб-приложений, оптимизация производительности, менторинг junior разработчиков"
+      position: "Bitrix Developer",
+      company: "WebStudio",
+      description: "Создание корпоративных порталов на Bitrix24, разработка модулей и компонентов"
     },
     {
       period: "2019 - 2020",
-      position: "Junior Frontend Developer",
-      company: "StartupHub",
-      description: "Создание пользовательских интерфейсов, работа с React и TypeScript"
+      position: "Junior Bitrix Developer",
+      company: "IT Solutions",
+      description: "Поддержка проектов на 1C-Bitrix, верстка и интеграция дизайна"
+    }
+  ];
+
+  const certificates = [
+    {
+      title: "Сертификат Bitrix",
+      issuer: "1C-Bitrix",
+      description: "Официальный сертификат разработчика 1C-Bitrix",
+      icon: "Award"
+    },
+    {
+      title: "Сертификат Минцифры РФ",
+      issuer: "Министерство цифрового развития РФ",
+      description: "Подтверждение квалификации специалиста",
+      icon: "ShieldCheck"
+    },
+    {
+      title: "Высшее образование",
+      issuer: "Технический университет",
+      description: "Диплом по специальности 'Информационные системы'",
+      icon: "GraduationCap"
     }
   ];
 
@@ -98,6 +119,7 @@ const Index = () => {
               {[
                 { id: 'hero', label: 'Главная' },
                 { id: 'about', label: 'Обо мне' },
+                { id: 'certificates', label: 'Сертификаты' },
                 { id: 'portfolio', label: 'Портфолио' },
                 { id: 'skills', label: 'Навыки' },
                 { id: 'experience', label: 'Опыт' },
@@ -131,22 +153,23 @@ const Index = () => {
                 <div className="h-px w-12 bg-primary" />
                 <Badge className="text-xs font-semibold tracking-wider" variant="outline">
                   <Icon name="Code2" size={14} className="mr-1" />
-                  WEB DEVELOPER
+                  BITRIX FULLSTACK DEVELOPER
                 </Badge>
                 <div className="h-px w-12 bg-primary" />
               </div>
               
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight">
-                <span className="text-secondary">Превращаю идеи</span>
+                <span className="text-secondary">Bitrix решения</span>
                 <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-primary/60">
-                  в технологии
+                  любой сложности
                 </span>
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground mb-12 max-w-3xl mx-auto leading-relaxed">
-                6 лет создания надежных веб-решений, которые работают безупречно
-                <span className="text-primary font-semibold"> 24/7</span>
+                Сертифицированный специалист с высшим образованием.
+                <br />
+                <span className="text-primary font-semibold">Bitrix + Минцифры РФ</span> — гарантия качества
               </p>
             </div>
 
@@ -156,8 +179,8 @@ const Index = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="Zap" size={24} className="text-primary" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Быстро</h3>
-                  <p className="text-sm text-muted-foreground">Оптимизированные решения с высокой производительностью</p>
+                  <h3 className="font-bold text-lg mb-2">Bitrix24</h3>
+                  <p className="text-sm text-muted-foreground">Интеграция, настройка и кастомизация корпоративного портала</p>
                 </CardContent>
               </Card>
               
@@ -166,8 +189,8 @@ const Index = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="Shield" size={24} className="text-primary" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Надежно</h3>
-                  <p className="text-sm text-muted-foreground">Проверенные технологии и лучшие практики разработки</p>
+                  <h3 className="font-bold text-lg mb-2">1C-Bitrix</h3>
+                  <p className="text-sm text-muted-foreground">Разработка интернет-магазинов и корпоративных сайтов</p>
                 </CardContent>
               </Card>
               
@@ -176,8 +199,8 @@ const Index = () => {
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center mx-auto mb-4">
                     <Icon name="Sparkles" size={24} className="text-primary" />
                   </div>
-                  <h3 className="font-bold text-lg mb-2">Современно</h3>
-                  <p className="text-sm text-muted-foreground">Актуальный стек и инновационные подходы к задачам</p>
+                  <h3 className="font-bold text-lg mb-2">Fullstack</h3>
+                  <p className="text-sm text-muted-foreground">API, интеграции, модули и компоненты под ключ</p>
                 </CardContent>
               </Card>
             </div>
@@ -224,12 +247,12 @@ const Index = () => {
             <Card>
               <CardContent className="pt-6">
                 <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-                  Веб-разработчик с 6-летним опытом создания масштабируемых и производительных веб-приложений. 
-                  Специализируюсь на frontend разработке с использованием современного стека технологий.
+                  Bitrix Fullstack разработчик с 6-летним опытом создания сложных интернет-магазинов и корпоративных порталов. 
+                  Специализируюсь на полном цикле разработки: от архитектуры до внедрения и поддержки.
                 </p>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Моя страсть — превращать сложные бизнес-требования в элегантные пользовательские интерфейсы. 
-                  Постоянно изучаю новые технологии и делюсь знаниями с командой.
+                  Имею официальные сертификаты 1C-Bitrix и Минцифры РФ, высшее техническое образование. 
+                  Постоянно совершенствую навыки и следую лучшим практикам разработки на платформе Bitrix.
                 </p>
               </CardContent>
             </Card>
@@ -237,7 +260,44 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="portfolio" className="py-24 px-4">
+      <section id="certificates" className="py-24 px-4">
+        <div className="container mx-auto max-w-6xl">
+          <h2 className="text-4xl font-bold mb-12 text-center">Сертификаты и образование</h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {certificates.map((cert, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow animate-fade-in border-primary/20">
+                <CardContent className="pt-8">
+                  <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <Icon name={cert.icon as any} size={36} className="text-primary" />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{cert.title}</h3>
+                  <p className="text-sm font-semibold text-primary mb-3">{cert.issuer}</p>
+                  <p className="text-sm text-muted-foreground">{cert.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          
+          <Card className="mt-8 border-primary/30 bg-primary/5">
+            <CardContent className="pt-6">
+              <div className="flex items-start gap-4">
+                <div className="w-12 h-12 bg-primary/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Icon name="CheckCircle2" size={24} className="text-primary" />
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold mb-2">Официальная сертификация</h3>
+                  <p className="text-muted-foreground">
+                    Все сертификаты можно проверить в официальных реестрах 1C-Bitrix и Минцифры РФ. 
+                    Подтвержденная квалификация гарантирует высокое качество работ и соблюдение стандартов разработки.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
+      <section id="portfolio" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto">
           <h2 className="text-4xl font-bold mb-12 text-center">Портфолио</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -267,7 +327,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="skills" className="py-24 px-4 bg-muted/30">
+      <section id="skills" className="py-24 px-4">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold mb-12 text-center">Навыки</h2>
           <div className="grid md:grid-cols-2 gap-6">
@@ -289,7 +349,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="experience" className="py-24 px-4">
+      <section id="experience" className="py-24 px-4 bg-muted/30">
         <div className="container mx-auto max-w-4xl">
           <h2 className="text-4xl font-bold mb-12 text-center">Опыт работы</h2>
           <div className="space-y-6">
@@ -313,7 +373,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-24 px-4 bg-muted/30">
+      <section id="contact" className="py-24 px-4">
         <div className="container mx-auto max-w-2xl text-center">
           <h2 className="text-4xl font-bold mb-6">Свяжитесь со мной</h2>
           <p className="text-lg text-muted-foreground mb-8">
